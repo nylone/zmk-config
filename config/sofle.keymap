@@ -26,6 +26,40 @@
         };
     };
 
+keymap {
+      compatible = "zmk,keymap";
+  default_layer {
+          bindings = <
+          &kp ESCAPE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp CAPSLOCK &kp GRAVE &kp Q &kp W &kp F &kp P &kp B &kp J &kp L &kp U &kp Y &kp SEMICOLON &kp BACKSPACE &kp TAB &kp A &kp R &kp S &kp T &kp G &kp M &kp N &kp E &kp I &kp O &kp SINGLE_QUOTE &kp LEFT_SHIFT &kp Z &kp X &kp C &kp D &kp V &kp C_MUTE &kp C_PLAY_PAUSE &kp K &kp H &kp COMMA &kp DOT &kp SLASH &mt LEFT_SHIFT F20 &kp LEFT_GUI &kp LEFT_ALT &kp LEFT_CONTROL &mo 2 &kp SPACE &kp SPACE &mo 1 &kp RIGHT_CONTROL &kp RIGHT_ALT &kp RIGHT_GUI
+          >;
+        };lower_layer {
+          bindings = <
+          &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &trans &kp N0 &kp N1 &kp N2 &kp N3 &trans [[KC_TILD]] &kp MINUS [[KC_AMPR]] [[KC_LPRN]] [[KC_RPRN]] &trans &trans &kp N0 &kp N4 &kp N5 &kp N6 &trans [[KC_EXLM]] &kp EQUAL [[KC_ASTR]] &kp LEFT_BRACKET &kp RIGHT_BRACKET &trans &trans &kp N0 &kp N7 &kp N8 &kp N9 &trans &trans &trans [[KC_QUES]] [[KC_UNDS]] &kp BACKSLASH [[KC_LT]] [[KC_GT]] &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+          >;
+        };raise_layer {
+          bindings = <
+          &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp BACKSPACE &kp INSERT [[QK_REP]] &kp DELETE &trans &kp PRINTSCREEN &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp CAPSLOCK &trans &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp HOME &kp PAGE_DOWN &kp PAGE_UP &kp END &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+          >;
+        };
+adjust_layer {
+// ----------------------------------------------------------------------------------------------------------------------------
+// | BTCLR  |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |                  |      |      |       |      |       |       |
+// | EXTPWR | RGB_HUD | RGB_HUI | RGB_SAD | RGB_SAI | RGB_EFF |                  |      |      |       |      |       |       |
+// |        | RGB_BRD | RGB_BRI |         |         |         |                  |      |      |       |      |       |       |
+// |        |         |         |         |         |         | RGB_TOG | |      |      |      |       |      |       |       |
+//                    |         |         |         |         |         | |      |      |      |       |      |
+            display-name = "adjust";
+            bindings = <
+&bt BT_CLR        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                            &none &none &none &none &none &none
+&ext_power EP_TOG &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI &rgb_ug RGB_EFF                         &none &none &none &none &none &none
+&none             &rgb_ug RGB_BRD &rgb_ug RGB_BRI &none           &none           &none                                   &none &none &none &none &none &none
+&none             &none           &none           &none           &none           &none            &rgb_ug RGB_TOG &none  &none &none &none &none &none &none
+                                  &none           &none           &none           &none            &none           &none  &none &none &none &none
+            >;
+        };
+    };
+/*
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -105,4 +139,5 @@
         };
 
     };
+*/
 };
