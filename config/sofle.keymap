@@ -55,11 +55,11 @@
 
         raise_layer {
             bindings = <
-&trans     &trans     &trans     &trans     &trans        &trans                    &trans    &trans         &trans       &trans      &trans  &trans
-&trans     &trans     &trans     &trans     &trans        &trans                    &trans    &kp BACKSPACE  &kp INSERT   &kp DELETE  &trans  &kp PRINTSCREEN
-&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp CAPSLOCK  &trans                    &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT   &trans  &trans
-&trans     &trans     &trans     &trans     &trans        &trans  &trans    &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END     &trans  &trans
-                      &trans     &trans     &trans        &trans  &trans    &trans  &trans    &trans         &trans       &trans
+&trans          &trans     &trans     &trans     &trans        &trans                    &trans    &trans         &trans       &trans      &trans      &trans
+&trans          &trans     &trans     &trans     &trans        &trans                    &trans    &kp BACKSPACE  &kp INSERT   &trans      &kp DELETE  &trans
+&kp PRINTSCREEN &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp CAPSLOCK                 &trans    &kp LEFT       &kp DOWN     &kp UP      &kp RIGHT   &trans
+&trans          &trans     &trans     &trans     &trans        &trans  &trans    &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END     &trans      &trans
+                           &trans     &trans     &trans        &trans  &trans    &trans  &trans    &trans         &trans       &trans
             >;
         };
 
