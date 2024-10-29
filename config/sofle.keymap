@@ -29,7 +29,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        colemak_layer {
             bindings = <
 &kp ESCAPE      &kp N1  &kp N2        &kp N3        &kp N4            &kp N5                                                       &kp N6           &kp N7             &kp N8         &kp N9         &kp N0         &kp CAPSLOCK
 &kp GRAVE       &kp Q   &kp W         &kp F         &kp P             &kp B                                                        &kp J            &kp L              &kp U          &kp Y          &kp SEMICOLON  &kp BACKSPACE
@@ -41,6 +41,8 @@
             sensor-bindings =
                 <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>,
                 <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+
+            label = "colemak";
         };
 
         lower_layer {
@@ -51,16 +53,20 @@
 &trans  &kp N0  &kp N7  &kp N8  &kp N9  &trans  &trans    &trans  &kp BSLH   &kp FSLH   &kp STAR       &kp LESS_THAN         &kp GREATER_THAN       &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans     &trans     &trans         &trans
             >;
+
+            label = "lower";
         };
 
         raise_layer {
             bindings = <
-&trans          &trans     &trans     &trans     &trans        &trans                    &trans    &trans         &trans       &trans      &trans      &trans
-&trans          &trans     &trans     &trans     &trans        &trans                    &trans    &kp BACKSPACE  &kp INSERT   &trans      &kp DELETE  &trans
-&kp PRINTSCREEN &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp CAPSLOCK                 &trans    &kp LEFT       &kp DOWN     &kp UP      &kp RIGHT   &trans
-&trans          &trans     &trans     &trans     &trans        &trans  &trans    &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END     &trans      &trans
-                           &trans     &trans     &trans        &trans  &trans    &trans  &trans    &trans         &trans       &trans
+&trans           &trans     &trans     &trans     &trans     &trans                          &trans    &trans         &trans       &trans   &trans      &trans
+&trans           &trans     &trans     &trans     &trans     &trans                          &trans    &kp BACKSPACE  &kp INSERT   &trans   &kp DELETE  &trans
+&kp PRINTSCREEN  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp CAPSLOCK                    &trans    &kp LEFT       &kp DOWN     &kp UP   &kp RIGHT   &trans
+&trans           &trans     &trans     &trans     &trans     &trans        &trans    &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END  &trans      &trans
+                            &trans     &trans     &trans     &trans        &trans    &trans  &trans    &trans         &trans       &trans
             >;
+
+            label = "raise";
         };
 
         adjust_layer {
