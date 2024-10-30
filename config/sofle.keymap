@@ -18,7 +18,11 @@
     hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
 };
 
-&mt { flavor = "tap-preferred"; };
+&mt {
+    flavor = "balanced";
+    quick-tap-ms = <200>;
+    require-prior-idle-ms = <125>;
+};
 
 &sensors { triggers-per-rotation = <20>; };
 
