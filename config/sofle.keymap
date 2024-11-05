@@ -14,18 +14,6 @@
 #define RAISE 2
 #define ADJUST 3
 
-&soft_off {
-    hold-time-ms = <5000>; // Only turn off it the key is held for 5 seconds or longer.
-};
-
-&mt {
-    quick-tap-ms = <200>;
-    require-prior-idle-ms = <125>;
-    flavor = "balanced";
-};
-
-&sk { lazy; };
-
 &sensors { triggers-per-rotation = <20>; };
 
 / {
@@ -55,7 +43,7 @@
 
         colemak_layer {
             bindings = <
-&kp ESCAPE  &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                                        &kp N6           &kp N7     &kp N8     &kp N9    &kp N0         &kp CAPS
+&kp ESCAPE  &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                                        &kp N6           &kp N7     &kp N8     &kp N9    &kp N0         &ext_power EP_TOG
 &kp GRAVE   &kp Q   &kp W     &kp F     &kp P      &kp B                                         &kp J            &kp L      &kp U      &kp Y     &kp SEMICOLON  &kp BACKSPACE
 &kp TAB     &kp A   &kp R     &kp S     &kp T      &kp G                                         &kp M            &kp N      &kp E      &kp I     &kp O          &kp SINGLE_QUOTE
 &kp LSHFT   &kp Z   &kp X     &kp C     &kp D      &kp V         &kp C_MUTE    &kp C_PLAY_PAUSE  &kp K            &kp H      &kp COMMA  &kp DOT   &kp SLASH      &kp RSHFT
@@ -118,11 +106,11 @@
 
             display-name = "adjust";
             bindings = <
-&bt BT_CLR        &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &tog 0  &tog 1  &none  &none  &none  &none
-&ext_power EP_ON  &ext_power EP_OFF  &none         &none         &none         &none                         &none   &none   &none  &none  &none  &none
-&none             &soft_off          &none         &none         &none         &none                         &none   &none   &none  &none  &none  &none
-&none             &none              &none         &none         &none         &none         &none    &none  &none   &none   &none  &none  &none  &none
-                                     &none         &none         &none         &none         &none    &none  &none   &none   &none  &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                  &tog 0  &tog 1  &none  &none  &none  &none
+&none       &none         &none         &none         &none         &none                         &none   &none   &none  &none  &none  &none
+&none       &none         &none         &none         &none         &none                         &none   &none   &none  &none  &none  &none
+&none       &none         &none         &none         &none         &none         &none    &none  &none   &none   &none  &none  &none  &none
+                          &none         &none         &none         &none         &none    &none  &none   &none   &none  &none
             >;
         };
     };
