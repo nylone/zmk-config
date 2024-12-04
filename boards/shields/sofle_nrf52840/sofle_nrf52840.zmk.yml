@@ -1,0 +1,17 @@
+file_format: "1"
+id: sofle_nrf52840
+name: Sofle
+type: shield
+url: https://github.com/josefadamcik/SofleKeyboard
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - encoder
+  - underglow
+  - studio
+siblings:
+  - sofle_nrf52840_dongle
+  - sofle_nrf52840_left
+  - sofle_nrf52840_right
