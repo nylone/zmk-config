@@ -12,6 +12,6 @@ features:
   - underglow
   - studio
 siblings:
-  - sofle_nrf52840_dongle
-  - sofle_nrf52840_left
-  - sofle_nrf52840_right
+  - sofle_dongle
+  - sofle_left
+  - sofle_right
