@@ -4,13 +4,17 @@
 if SHIELD_SOFLE_DONGLE
 
 config ZMK_KEYBOARD_NAME
-    default "Rampofle"
+    default "Rampeo's Sofle"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 config ZMK_USB
 	default y
+
+endif
+
+if SHIELD_SOFLE_DONGLE || SHIELD_SOFLE_LEFT || SHIELD_SOFLE_RIGHT
 
 config ZMK_SPLIT
     default y

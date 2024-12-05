@@ -13,3 +13,5 @@ features:
   - studio
 siblings:
   - sofle_nrf52840_dongle
+  - sofle_nrf52840_left
+  - sofle_nrf52840_right
