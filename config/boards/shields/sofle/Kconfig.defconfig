@@ -18,7 +18,7 @@ endif
 if SHIELD_SOFLE_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Rampeo's travel Sofle"
+    default "Rampeo_Sofle_trv"
 
 config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
     default 1
@@ -28,7 +28,7 @@ endif
 if SHIELD_SOFLE_DONGLE
 
 config ZMK_KEYBOARD_NAME
-    default "Rampeo's fixed Sofle"
+    default "Rampeo_Sofle_dng"
 
 config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
     default 2
