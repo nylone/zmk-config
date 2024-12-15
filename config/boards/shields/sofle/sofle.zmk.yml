@@ -13,5 +13,7 @@ features:
   - studio
 siblings:
   - sofle_dongle
+  - sofle_dongle_left
+  - sofle_dongle_right
   - sofle_left
   - sofle_right
